@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Kaizar Official | Testing Website</title>
+    <link rel="stylesheet" href="style.css"/>
+    </head>
+    <body>
+            <nav>
+                <h1>Testing Website</h1>
+                <ul>
+                   <li><a href="#home">Beranda</a></li>
+                   <li><a href="#about">Tentang Saya</a></li>
+                   <li><a href="#projects">Project Saya</a></li>
+                   <li><a href="#contact">Kontak Saya</a></li>
+            </ul>
+        </nav>
+        <section id="home" class="hero">
+            <h2>Selamat Datang, Di <span>Testing Website </span>Saya!</h2>
+            <p>Hanya Testing Website | Just Testing Website</p>
+            <button onclick="scrollToContact()">Hubungi Saya</button>
+        </section>
+
+        <section id="about" class="section">
+            <h2>Tentang Saya</h2>
+            <p>Ini hanya Testing Website, saya sedang belajar untuk menjadi Website Developer.</p>
+        </section>
+
+        <section id="projects" class="section">
+            <h2>Project Saya</h2>
+            <p>Berikut adalah beberapa Daftar Project yang telah saya kerjakan.</p>
+
+            <div class="project-list">
+                <div class="card">
+                    <h3>Project 1</h3>
+                    <p>Ini adalah beberapa Project Website yang saya kerjakan.</p>
+                </div>
+                <div class="card">
+                    <h3>Project 2</h3>
+                    <p>Ini adalah beberapa Project Game yang saya kerjakan.</p>
+                </div>
+                <div class="card">
+                    <h3>Project 3</h3>
+                    <p>Ini adalah beberapa Project Aplikasi yang saya kerjakan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <h2>Kontak Saya</h2>
+
+            <form id="contactForm">
+                <input type="text" placeholder="Masukin Nama Kamu" required/>
+                <input type="email" placeholder="Masukin Email Kamu" required/>
+                <textarea placeholder="Apa Yang Ingin Kamu Sampaikan?" required></textarea>
+                <button type="submit">Kirim</button>
+                <button type="reset">Ulangi</button>
+            </form>
+
+            <p id="message" class="message"></p>
+            <div id="popup" class="popup" aria-live="polite">
+                <div class="popup-content">
+                    <p id="popupText"></p>
+                    <button id="closePopup">OK</button>
+                </div>
+            </div>
+
+        </section>
+
+        <footer>
+            <p>&copy; 2026 Kaizar Official. All rights reserved.</p>
+        </footer>
+    </body>
+    <script src="script.js"></script>
+</html>

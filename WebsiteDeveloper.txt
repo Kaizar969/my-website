@@ -1,0 +1,124 @@
+Untuk membuat website lengkap karya sendiri dari nol sampai live (yang bisa diakses public) secara gratis, kamu bisa menggunakan kombinasi Vercel (untuk tampilan/frontend) dan Render (untuk server/backend, jika websitemu butuh olah data).
+
+File-file yang Diperlukan?
+
+Berikut struktur file dasar yang perlu kamu siapkan di dalam satu folder proyek:
+
+Buat Folder: my-website/
+├── index.html   = Struktur utama halaman website
+├── style.css    = Desain, warna, dan tata letak
+├── script.js    = Logika interaksi frontend \& pemanggil API
+├── server.js    = Logika backend/server (opsional, jika pakai backend)
+├── package.json = Catatan library/dependensi proyek (dibuat otomatis oleh Node.js)
+└── .gitignore   = Mengatur file yang tidak boleh diunggah (misal: node\_modules)
+
+---
+
+Berikut adalah langkah-langkah lengkapnya:
+
+A. Buat Kode Website: Menyiapkan file di komputer lokal.
+
+   1. Buat folder baru bernama my-website di komputermu.
+   2. Buka folder tersebut di code editor (seperti Visual Studio Code).
+   3. Buat file index.html, style.css, dan script.js.
+
+Jika menggunakan backend Node.js/Express, buka terminal di VS Code lalu jalankan:
+
+      bash
+
+      npm init -y
+      npm install express cors
+
+Note: Ini akan otomatis membuat file package.json. Buat file server.js untuk membuat API backend-mu.
+
+B. Simpan Proyek ke GitHub: Mengamankan dan menyimpan histori kode.
+
+   1. Buat akun gratis di \[GitHub](https://github.com?utm\_source=gemini).
+   2. Buat repositori (repository) baru di GitHub, beri nama misalnya my-website.
+   3. Unggah seluruh file proyekmu ke repositori tersebut (bisa lewat aplikasi GitHub Desktop atau terminal Git).
+
+C. Deploy Frontend ke Vercel: Server frontend otomatis aktif dalam hitungan detik.
+
+   1. Buat akun di \[Vercel](https://vercel.com?utm\_source=gemini) dan hubungkan (login) menggunakan akun GitHub kamu.
+   2. Klik Add New > Project, lalu pilih repositori my-website dari GitHub.
+   3. Klik Deploy.
+   4. Vercel akan otomatis memproses kode dan memberimu URL gratis (contoh: my-website.vercel.app) yang sudah live dan bisa diakses siapa saja.
+
+D. Deploy Backend ke Render (Opsional): Diperlukan hanya jika websitemu menggunakan server/database.
+
+Jika websitemu memiliki file server.js (backend):
+
+   1. Buat akun gratis di \[Render](https://render.com?utm\_source=gemini) dan sambungkan ke GitHub.
+   2. Pilih New > Web Service, lalu pilih repositori my-website.
+   3. Pada Build Command, isi: npm install.
+   4. Pada Start Command, isi: node server.js.
+   5. Klik Create Web Service. Render akan membuatkan URL backend gratis (contoh: my-backend.onrender.com).
+
+E. Hubungkan Frontend ke URL Backend: Menghubungkan kedua sisi.
+
+
+   1. Pada file script.js di frontend, ganti alamat http://localhost:5000 menjadi URL backend dari Render tadi:
+      (\[https://my-backend.onrender.com](https://my-backend.onrender.com)).
+   2. Simpan dan push perubahan kode ke GitHub. Vercel akan otomatis memperbarui tampilan websitemu tanpa perlu kamu deploy ulang secara manual.
+
+
+==================================================================================================================================================================
+
+
+Untuk mengganti domain bawaan gratisan (seperti my-website.vercel.app) menjadi domain kustom pilihanmu sendiri (seperti namawebsitemu.com atau namawebsitemu.id), ada beberapa langkah utama yang perlu dilakukan.
+
+---
+
+Berikut adalah langkah-langkah lengkapnya:
+
+A. Beli Nama Domain
+
+Penyedia Domain Populer:
+
+   1. Lokal (Indonesia): Rumahweb, Niagahoster, DomaiNesia, Exabytes (mudah untuk pembayaran via QRIS/Bank lokal, bagus untuk domain .id).
+   2. Global: Cloudflare Domains, Namecheap, GoDaddy.
+
+Note: Ekstensi .com biasanya berkisar Rp130.000 – Rp170.000/tahun, sedangkan ekstensi .id atau .my.id bisa lebih murah (mulai dari Rp15.000 – Rp200.000/tahun).
+
+B. Tambahkan Domain ke Dashboard Vercel (Frontend)
+
+Setelah memiliki nama domain:
+
+   1. Buka dashboard \[Vercel](https://vercel.com?utm\_source=gemini) dan pilih proyek websitemu.
+   2. Masuk ke menu Settings > Domains.
+   3. Ketik nama domain barumu (contoh: namawebsitemu.com), lalu klik Add.
+   4. Vercel akan menampilkan instruksi DNS Record (IP Address dan CNAME) yang harus kamu pasangkan di akun penyedia domainmu.
+
+C. Pengaturan DNS di Penyedia Domain (Registrar)
+
+Buka panel kontrol tempat kamu membeli domain (misal: Niagahoster/Rumahweb), cari menu DNS Management atau Zone Editor, lalu tambahkan 2 baris catatan (record) berikut sesuai petunjuk Vercel:
+
+   | Type         | Name / Host       | Target / Value         | Keterangan                                |
+
+   |              |                   |                        |                                           |
+
+   | A Record     | @ (atau kosong)   | 76.76.21.21            | Mengarahkan domain utama ke server Vercel |
+
+   | CNAME        | www               | cname.vercel-dns.com   | Mengarahkan versi www ke Vercel           |
+
+D. Tunggu Propagasi DNS \& Verifikasi SSL
+
+   1. Propagasi DNS: Proses penyebaran alamat baru ini membutuhkan waktu antara 5 menit hingga maksimal 24 jam (biasanya hanya 10–30 menit).
+   2. SSL (HTTPS Gratis): Vercel akan secara otomatis mendeteksi jika DNS sudah terhubung dan langsung memasangkan sertifikat SSL (HTTPS/gembok aman) ke domain barumu tanpa biaya
+      tambahan.
+
+E. Sesuaikan Pengaturan Backend \& CORS (Jika Menggunakan Backend)
+
+Jika websitemu terhubung ke backend di Render:
+
+   1. Atur CORS di Backend: Buka kode server.js di backend, lalu tambahkan/perbarui izin CORS agar menerima permintaan dari domain barumu:
+
+      javascript
+
+      app.use(cors({
+      origin: \[https://namawebsitemu.com, https://www.namawebsitemu.com]
+      }));
+
+   2. Atur Custom Domain Backend (Opsional): Jika ingin backend-mu juga punya domain sendiri (misal: api.namawebsitemu.com), kamu bisa menambahkan sub-domain tersebut di pengaturan
+      Custom Domains pada dashboard Render dengan cara konfigurasi CNAME yang serupa.
+
