@@ -22,12 +22,12 @@ nav {
     width: clamp(290px, 60vw, 380px);
     min-width: max-content;
     max-width: none;
-    padding:  clamp(10px, 1.5vw, 14px);
-    font-size: clamp(14px, 1.5vw, 16px);
+    padding:  clamp(11px, 1.6vw, 15px);
+    font-size: clamp(15px, 1.6vw, 17px);
     font-weight: 850;
     background: rgba(0, 0, 0, 0.60);
     color: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    border: 2px solid rgba(255, 255, 255, 0.18);
     border-radius: 9999px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
     backdrop-filter: blur(5px);
@@ -47,7 +47,7 @@ nav ul {
 
 nav a {
     display: block;
-    padding: 8px 14px;
+    padding: 9px 15px;
     position: relative;
     overflow: hidden;
     isolation: isolate;
@@ -64,7 +64,7 @@ nav a:not(.active)::before {
     position: absolute;
     z-index: -1;
     inset: 0;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 9999px;
     background: rgba(255, 255, 255, 0.12);
     box-shadow: 0 0 14px rgba(255, 255, 255, 0.2);
@@ -169,8 +169,8 @@ section {
 @media (max-width: 600px) {
     nav {
         top: 20px;
-        padding: 8px;
-        transform: translateX(-50%) scale(0.85);
+        padding: 9px;
+        transform: translateX(-50%) scale(0.9);
         transform-origin: top center;
         width: 290px;
 
@@ -181,8 +181,8 @@ section {
     }
 
     nav a {
-        padding: 7px 9px;
-        font-size: 12px;
+        padding: 8px 10px;
+        font-size: 13px;
     }
 }
 
