@@ -29,8 +29,8 @@ html, body {
   position: fixed !important;
   top: -100px;
   left: -100px;
-  width: 250px;
-  height: 250px;
+  width: 375px;
+  height: 375px;
   background: radial-gradient(
     circle,
     rgba(99, 102, 241, 0.45) 0%,
@@ -47,8 +47,8 @@ html, body {
   position: fixed !important;
   bottom: -100px;
   right: -100px;
-  width: 250px;
-  height: 250px;
+  width: 375px;
+  height: 375px;
   background: radial-gradient(
     circle,
     rgba(59, 130, 246, 0.4) 0%,
