@@ -30,8 +30,8 @@ html, body {
   position: fixed !important;
   top: -50px;
   left: 50px;
-  width: 450px;
-  height: 450px;
+    width: clamp(220px, 45vw, 450px);
+    height: clamp(220px, 45vw, 450px);
   background: radial-gradient(
     circle,
     rgba(99, 102, 241, 0.20) 0%,
@@ -40,6 +40,7 @@ html, body {
   );
   filter: blur(150px);
   border-radius: 50%;
+    transition: width 0.35s ease, height 0.35s ease;
   pointer-events: none;
   z-index: 9999;
 }
@@ -48,8 +49,8 @@ html, body {
   position: fixed !important;
   bottom: -100px;
   right: -100px;
-  width: 450px;
-  height: 450px;
+    width: clamp(220px, 45vw, 450px);
+    height: clamp(220px, 45vw, 450px);
   background: radial-gradient(
     circle,
     rgba(59, 130, 246, 0.20) 0%,
@@ -58,6 +59,7 @@ html, body {
   );
   filter: blur(150px);
   border-radius: 50%;
+    transition: width 0.35s ease, height 0.35s ease;
   pointer-events: none;
   z-index: 9999;
 }
