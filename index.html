@@ -8,27 +8,31 @@
     </head>
     <body>
             <nav>
-                <h1>Testing Website</h1>
                 <ul>
-                   <li><a href="#home">Beranda</a></li>
-                   <li><a href="#about">Tentang Saya</a></li>
-                   <li><a href="#projects">Project Saya</a></li>
-                   <li><a href="#contact">Kontak Saya</a></li>
+                   <li><a href="#home">Home</a></li>
+                   <li><a href="#about">About</a></li>
+                   <li><a href="#projects">Projects</a></li>
+                   <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <section id="home" class="hero">
-            <h2>Selamat Datang, Di <span>Testing Website </span>Saya!</h2>
-            <p>Hanya Testing Website | Just Testing Website</p>
-            <button onclick="scrollToContact()">Hubungi Saya</button>
+            <div class="hero-content">
+                <h2>Turning Ideas <span>Into Reality.</span></h2>
+                <p>Dimulai dari rasa penasaran, berkembang menjadi passion. Aku membangun pengalaman digital yang tidak hanya terlihat bagus, tapi juga terasa bermakna bagi penggunanya.</p>
+                <div class="hero-actions">
+                    <a class="hero-button hero-button-primary" href="#contact">Contact</a>
+                    <a class="hero-button hero-button-secondary" href="#projects">Projects</a>
+                </div>
+            </div>
         </section>
 
         <section id="about" class="section">
-            <h2>Tentang Saya</h2>
+            <h2>About</h2>
             <p>Ini hanya Testing Website, saya sedang belajar untuk menjadi Website Developer.</p>
         </section>
 
         <section id="projects" class="section">
-            <h2>Project Saya</h2>
+            <h2>Projects</h2>
             <p>Berikut adalah beberapa Daftar Project yang telah saya kerjakan.</p>
 
             <div class="project-list">
@@ -48,7 +52,7 @@
         </section>
 
         <section id="contact" class="section">
-            <h2>Kontak Saya</h2>
+            <h2>Contact</h2>
 
             <form id="contactForm">
                 <input type="text" placeholder="Masukin Nama Kamu" required/>
@@ -71,6 +75,7 @@
         <footer>
             <p>&copy; 2026 Kaizar Official. All rights reserved.</p>
         </footer>
+
     </body>
     <script src="script.js"></script>
 </html>

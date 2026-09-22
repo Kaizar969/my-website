@@ -2,8 +2,8 @@ function scrollToContact() {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 }
 
-function scrollToContact() {
-    document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+function scrollToProjects() {
+    document.getElementById('projects').scrollIntoView({ behavior: 'smooth' });
 }
 
 const form = document.getElementById('contactForm');
@@ -11,6 +11,37 @@ const popup = document.getElementById('popup');
 const popupText = document.getElementById('popupText');
 const closePopupButton = document.getElementById('closePopup');
 let skipResetMessage = false;
+
+const navigationLinks = document.querySelectorAll('nav a');
+const pageSections = document.querySelectorAll('section[id]');
+
+function setActiveNavigation(sectionId) {
+    navigationLinks.forEach(function (link) {
+        link.classList.toggle('active', link.getAttribute('href') === `#${sectionId}`);
+    });
+}
+
+navigationLinks.forEach(function (link) {
+    link.addEventListener('click', function () {
+        setActiveNavigation(link.getAttribute('href').slice(1));
+    });
+});
+
+const sectionObserver = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+            setActiveNavigation(entry.target.id);
+        }
+    });
+}, {
+    rootMargin: '-35% 0px -55% 0px'
+});
+
+pageSections.forEach(function (section) {
+    sectionObserver.observe(section);
+});
+
+setActiveNavigation('home');
 
 function openPopup(messageText) {
     popupText.textContent = messageText;
