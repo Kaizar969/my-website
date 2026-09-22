@@ -7,12 +7,17 @@
     <link rel="stylesheet" href="style.css"/>
     </head>
     <body>
-            <nav>
-                <ul>
-                   <li><a href="#home">Home</a></li>
-                   <li><a href="#about">About</a></li>
-                   <li><a href="#projects">Projects</a></li>
-                   <li><a href="#contact">Contact</a></li>
+        <canvas id="bgCanvas"></canvas>
+
+        <div class="ambience-top-left"></div>
+        <div class="ambience-bottom-right"></div>
+
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
         <section id="home" class="hero">
@@ -21,7 +26,7 @@
                 <p>Dimulai dari rasa penasaran, berkembang menjadi passion. Aku membangun pengalaman digital yang tidak hanya terlihat bagus, tapi juga terasa bermakna bagi penggunanya.</p>
                 <div class="hero-actions">
                     <a class="hero-button hero-button-primary" href="#contact">Contact</a>
-                    <a class="hero-button hero-button-secondary" href="#projects">Projects</a>
+                    <a class="hero-button hero-button-secondary" href="#products">Products</a>
                 </div>
             </div>
         </section>
@@ -31,22 +36,22 @@
             <p>Ini hanya Testing Website, saya sedang belajar untuk menjadi Website Developer.</p>
         </section>
 
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <p>Berikut adalah beberapa Daftar Project yang telah saya kerjakan.</p>
+        <section id="products" class="section">
+            <h2>Products</h2>
+            <p>Berikut adalah beberapa Daftar Product yang telah saya ciptakan.</p>
 
-            <div class="project-list">
+            <div class="products-list">
                 <div class="card">
-                    <h3>Project 1</h3>
-                    <p>Ini adalah beberapa Project Website yang saya kerjakan.</p>
+                    <h3>Product 1</h3>
+                    <p>Ini adalah Product Best Seller.</p>
                 </div>
                 <div class="card">
-                    <h3>Project 2</h3>
-                    <p>Ini adalah beberapa Project Game yang saya kerjakan.</p>
+                    <h3>Product 2</h3>
+                    <p>Ini adalah Product ke-2.</p>
                 </div>
                 <div class="card">
-                    <h3>Project 3</h3>
-                    <p>Ini adalah beberapa Project Aplikasi yang saya kerjakan.</p>
+                    <h3>Product 3</h3>
+                    <p>Ini adalah Product ke-3.</p>
                 </div>
             </div>
         </section>
@@ -78,4 +83,5 @@
 
     </body>
     <script src="script.js"></script>
+    <script src="background.js"></script>
 </html>

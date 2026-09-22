@@ -5,9 +5,65 @@
     font-family: Arial, sans-serif;
 }
 
+html,
 body {
-    background: #ffffff;
-    color: #000000;
+    min-height: 100%;
+}
+
+#bgCanvas {
+  position: fixed;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  pointer-events: none;
+  background-color: #01040e;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
+.ambience-top-left {
+  position: fixed !important;
+  top: -100px;
+  left: -100px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(99, 102, 241, 0.45) 0%,
+    rgba(168, 85, 247, 0.25) 50%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.ambience-bottom-right {
+  position: fixed !important;
+  bottom: -100px;
+  right: -100px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(
+    circle,
+    rgba(59, 130, 246, 0.4) 0%,
+    rgba(14, 165, 233, 0.2) 50%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+body > *:not(#bgCanvas):not(nav) {
+    position: relative;
+    z-index: 1;
 }
 
 nav {
@@ -15,7 +71,7 @@ nav {
     align-items: center;
     justify-content: center;
     position: fixed;
-    top: 20px;
+    background: rgba(0, 0, 0, 0.50); top: 20px;
     left: 50%;
     transform: translateX(-50%) scale(1);
     transform-origin: top center;
@@ -25,13 +81,12 @@ nav {
     padding:  clamp(11px, 1.6vw, 15px);
     font-size: clamp(15px, 1.6vw, 17px);
     font-weight: 850;
-    background: rgba(0, 0, 0, 0.60);
+    background: #101826;
     color: #ffffff;
-    border: 2px solid rgba(255, 255, 255, 0.18);
     border-radius: 9999px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     z-index: 1000;
     transition: transform 0.25s ease, width 0.25s ease,
         padding 0.25s ease, font-size 0.6s ease;
@@ -64,14 +119,13 @@ nav a:not(.active)::before {
     position: absolute;
     z-index: -1;
     inset: 0;
-    border: 2px solid rgba(255, 255, 255, 0.3);
     border-radius: 9999px;
     background: rgba(255, 255, 255, 0.12);
     box-shadow: 0 0 14px rgba(255, 255, 255, 0.2);
     opacity: 0;
     transform: scale(0.9);
     transition: opacity 0.35s ease,
-        transform 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+        transform 0.35s cubic-bezier(0.22, 1.20, 0.36, 1.20);
 }
 
 nav a:not(.active):hover::before {
@@ -191,10 +245,7 @@ section {
     position: relative;
     overflow: hidden;
     padding: 120px max(24px, 8vw) 72px;
-    background:
-        radial-gradient(circle at 18% 25%, rgba(255, 255, 255, 0.2), transparent 24%),
-        radial-gradient(circle at 82% 78%, rgba(0, 70, 180, 0.35), transparent 30%),
-        linear-gradient(135deg, #1264d8, #00aebd);
+    background: transparent;
     color: #ffffff;
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(260px, 0.7fr);
@@ -205,14 +256,7 @@ section {
 }
 
 .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-    background-size: 42px 42px;
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent 75%);
-    opacity: 0.35;
+    display: none;
 }
 
 .hero-content {
@@ -280,16 +324,14 @@ section {
 
 .hero-button-primary {
     background: #ffffff;
-    color: #1264d8;
+    color: #000000;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
 }
 
 .hero-button-secondary {
-    border: 1px solid rgba(255, 255, 255, 0.45);
-    background: rgba(255, 255, 255, 0.1);
-    color: #ffffff;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: #ffffff;
+    color: #000000;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
 }
 
 .hero-button:hover {
@@ -456,9 +498,9 @@ body.popup-open {
 
 footer {
     padding: 20px;
-    background: #000000;
-    color: #ffffff;
+    background: transparent;
     text-align: center;
+    color: #ffffff;
 }
 
 html {
