@@ -52,7 +52,6 @@ class Particle {
   }
 
   update() {
-    // Gerakan dasar tetap berjalan, termasuk saat partikel berada di radius cursor.
     this.x += this.directionX;
     this.y += this.directionY;
 
@@ -92,11 +91,11 @@ class Particle {
 function init() {
   particlesArray = [];
   for (let i = 0; i < numberOfParticles; i++) {
-    let size = (Math.random() * 2) + 1; // Ukuran partikel (1px - 3px)
+    let size = (Math.random() * 2) + 1;
     let x = Math.random() * canvas.width;
     let y = Math.random() * canvas.height;
-    let directionX = (Math.random() * 1) - 0.5; // Kecepatan X
-    let directionY = (Math.random() * 1) - 0.5; // Kecepatan Y
+    let directionX = (Math.random() * 1) - 0.5;
+    let directionY = (Math.random() * 1) - 0.5;
     let color = 'rgb(255, 255, 255)';
 
     particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
