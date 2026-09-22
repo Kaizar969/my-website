@@ -8,6 +8,7 @@
 html,
 body {
     min-height: 100%;
+    background-color: #01040e;
 }
 
 #bgCanvas {
@@ -372,6 +373,7 @@ section {
     .hero-button {
         text-align: center;
     }
+
 }
 
 .hero-content h2 span {
