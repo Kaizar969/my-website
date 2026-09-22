@@ -28,7 +28,7 @@ html, body {
 .ambience-top-left {
   position: fixed !important;
   top: -100px;
-  left: -100px;
+  left: 50px;
   width: 450px;
   height: 450px;
   background: radial-gradient(
@@ -120,7 +120,7 @@ nav a:not(.active)::before {
     z-index: -1;
     inset: 0;
     border-radius: 9999px;
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(0, 210, 255, 0.12);
     box-shadow: 0 0 14px rgba(255, 255, 255, 0.2);
     opacity: 0;
     transform: scale(0.9);
@@ -136,9 +136,7 @@ nav a:not(.active):hover::before {
 nav a.active {
     overflow: hidden;
     color: #8ff5ff;
-    background: rgba(0, 210, 255, 0.14);
-    text-shadow: 0 0 8px rgba(143, 245, 255, 0.75);
-    animation: activeColorPulse 4.8s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+    background: rgba(0, 210, 255, 0.12);
 }
 
 nav a.active::before {
@@ -150,13 +148,14 @@ nav a.active::before {
     width: 45%;
     height: 190%;
     border-radius: 50%;
-    background: rgba(143, 245, 255, 0.38);
-    filter: blur(10px);
+    background: rgba(255, 255, 255, 0.100);
+    filter: blur(8px);
     opacity: 0.7;
     animation: activeLightSweep 5s cubic-bezier(0.4, 0, 0.2, 1) infinite,
-        activeLightWave 2.5s ease-in-out infinite;
+        activeLightWave 3.5s ease-in-out infinite;
     pointer-events: none;
 }
+
 
 @keyframes activeLightSweep {
     0% {
@@ -199,20 +198,6 @@ nav a.active::before {
         opacity: 0.7;
         transform: scaleY(1.08) skewX(8deg);
         border-radius: 52% 48% 45% 55%;
-    }
-}
-
-@keyframes activeColorPulse {
-    from {
-        color: #8ff5ff;
-        background: rgba(0, 210, 255, 0.12);
-        text-shadow: 0 0 7px rgba(143, 245, 255, 0.62);
-    }
-
-    to {
-        color: #c2fbff;
-        background: rgba(0, 210, 255, 0.18);
-        text-shadow: 0 0 10px rgba(143, 245, 255, 0.82);
     }
 }
 
@@ -389,8 +374,9 @@ section {
     }
 }
 
-.hero span {
-    color: #ffff00;
+.hero-content h2 span {
+    color: #2c67ed;
+    text-shadow: none;
 }
 
 .section {
