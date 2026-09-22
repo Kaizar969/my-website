@@ -29,15 +29,15 @@ html, body {
   position: fixed !important;
   top: -100px;
   left: -100px;
-  width: 375px;
-  height: 375px;
+  width: 450px;
+  height: 450px;
   background: radial-gradient(
     circle,
-    rgba(99, 102, 241, 0.45) 0%,
-    rgba(168, 85, 247, 0.25) 50%,
+    rgba(99, 102, 241, 0.20) 0%,
+    rgba(168, 85, 247, 0.20) 50%,
     rgba(0, 0, 0, 0) 70%
   );
-  filter: blur(100px);
+  filter: blur(150px);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
@@ -47,15 +47,15 @@ html, body {
   position: fixed !important;
   bottom: -100px;
   right: -100px;
-  width: 375px;
-  height: 375px;
+  width: 450px;
+  height: 450px;
   background: radial-gradient(
     circle,
-    rgba(59, 130, 246, 0.4) 0%,
-    rgba(14, 165, 233, 0.2) 50%,
+    rgba(59, 130, 246, 0.20) 0%,
+    rgba(14, 165, 233, 0.20) 50%,
     rgba(0, 0, 0, 0) 70%
   );
-  filter: blur(100px);
+  filter: blur(150px);
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;
