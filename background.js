@@ -2,7 +2,7 @@ const canvas = document.getElementById('bgCanvas');
 const ctx = canvas.getContext('2d');
 
 let particlesArray = [];
-const numberOfParticles = 40;
+const numberOfParticles = 60;
 
 const mouse = {
   x: null,
