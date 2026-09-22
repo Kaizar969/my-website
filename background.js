@@ -23,16 +23,26 @@ window.addEventListener('mouseout', () => {
 function resizeCanvas() {
   const viewportWidth = document.documentElement.clientWidth;
   const viewportHeight = document.documentElement.clientHeight;
+  const previousWidth = canvas.width;
+  const previousHeight = canvas.height;
 
   canvas.width = viewportWidth;
   canvas.height = viewportHeight;
   canvas.style.width = `${viewportWidth}px`;
   canvas.style.height = `${viewportHeight}px`;
-  init();
+
+  if (previousWidth && previousHeight) {
+    const widthRatio = viewportWidth / previousWidth;
+    const heightRatio = viewportHeight / previousHeight;
+
+    particlesArray.forEach((particle) => {
+      particle.x *= widthRatio;
+      particle.y *= heightRatio;
+    });
+  }
 }
 
 window.addEventListener('resize', resizeCanvas);
-window.visualViewport?.addEventListener('resize', resizeCanvas);
 
 class Particle {
   constructor(x, y, directionX, directionY, size, color) {
@@ -133,4 +143,5 @@ function animate() {
 }
 
 resizeCanvas();
+init();
 animate();
