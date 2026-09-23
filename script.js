@@ -45,8 +45,8 @@ setActiveNavigation('home');
 
 const heroTyping = document.querySelector('.hero-typing');
 const heroTypingMessages = [
-    'Website Ini Belum Jadi!',
-    'Solo Web Developed by: Kaizar.'
+    'Website Ini Belum 100% Jadi!',
+    'Solo Developed by: Kaizar.'
 ];
 let heroTypingMessageIndex = 0;
 let heroTypingCharacterIndex = 0;

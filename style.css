@@ -441,7 +441,7 @@ section {
     }
 
     .hero-typing {
-        font-size: clamp(15px, 1vw, 15px);
+        font-size: clamp(18px, 1.3vw, 18px);
     }
 
     .hero-button {
@@ -502,7 +502,7 @@ section {
     }
 
     .hero-typing {
-        font-size: 9.2px;
+        font-size: 8.7px;
     }
 
     .hero-actions {
