@@ -350,7 +350,6 @@ section {
 
 .hero h2 {
     max-width: 720px;
-    font-size: 72px;
     line-height: 1.05;
     letter-spacing: 0;
     font-family: "Dela Gothic One", sans-serif;
@@ -461,7 +460,7 @@ section {
     }
 
     .hero h2 {
-        font-size: 40px;
+        font-size: 30px;
     }
 
     .hero h2 br:first-of-type {
