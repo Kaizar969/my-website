@@ -215,6 +215,10 @@ section {
         filter: blur(90px);
     }
 
+    .ambience-bottom-right {
+        filter: blur(90px);
+    }
+
     nav {
         top: 20px;
         padding: 9px;
