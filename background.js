@@ -106,7 +106,7 @@ function init() {
     let y = Math.random() * canvas.height;
     let directionX = (Math.random() * 1) - 0.5;
     let directionY = (Math.random() * 1) - 0.5;
-    let color = 'rgb(255, 255, 255)';
+    let color = 'rgb(44, 103, 237)';
 
     particlesArray.push(new Particle(x, y, directionX, directionY, size, color));
   }
