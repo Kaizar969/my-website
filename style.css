@@ -209,6 +209,12 @@ section {
 }
 
 @media (max-width: 600px) {
+    .ambience-top-left {
+        top: -25px;
+        left: -25px;
+        filter: blur(90px);
+    }
+
     nav {
         top: 20px;
         padding: 9px;
