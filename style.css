@@ -445,9 +445,9 @@ section {
     }
 
     .hero-description {
-        max-width: 480px;
+        max-width: 400px;
         margin-top: 15px;
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .hero-typing {
@@ -506,10 +506,9 @@ section {
     }
 
     .hero-description {
-        width: 200px;
         max-width: 200px;
         margin-top: 3px;
-        font-size: 5.7px;
+        font-size: 7px;
         line-height: 1.6;
     }
 
