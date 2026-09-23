@@ -43,6 +43,37 @@ pageSections.forEach(function (section) {
 
 setActiveNavigation('home');
 
+const heroTyping = document.querySelector('.hero-typing');
+const heroTypingMessages = [
+    'Website Ini Belum Jadi!',
+    'Solo Web Developed by: Kaizar.'
+];
+let heroTypingMessageIndex = 0;
+let heroTypingCharacterIndex = 0;
+let heroTypingIsDeleting = false;
+
+function runHeroTyping() {
+    const currentMessage = heroTypingMessages[heroTypingMessageIndex];
+    heroTyping.textContent = currentMessage.slice(0, heroTypingCharacterIndex);
+
+    let typingDelay = heroTypingIsDeleting ? 55 : 100;
+
+    if (!heroTypingIsDeleting && heroTypingCharacterIndex === currentMessage.length) {
+        heroTypingIsDeleting = true;
+        typingDelay = 1800;
+    } else if (heroTypingIsDeleting && heroTypingCharacterIndex === 0) {
+        heroTypingIsDeleting = false;
+        heroTypingMessageIndex = (heroTypingMessageIndex + 1) % heroTypingMessages.length;
+        typingDelay = 500;
+    } else {
+        heroTypingCharacterIndex += heroTypingIsDeleting ? -1 : 1;
+    }
+
+    window.setTimeout(runHeroTyping, typingDelay);
+}
+
+runHeroTyping();
+
 function openPopup(messageText) {
     popupText.textContent = messageText;
     popup.classList.add('show');
