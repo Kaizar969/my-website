@@ -414,6 +414,7 @@ section {
 
     .hero-content {
         margin-left: -1.5vw;
+        animation: none;
     }
 
     .hero-music-space {
