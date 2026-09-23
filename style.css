@@ -268,7 +268,7 @@ section {
     scroll-margin-top: 90px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     html,
     body {
         scrollbar-width: none;
@@ -496,6 +496,7 @@ section {
     .hero {
         height: calc(100vh / 1.5);
         min-height: calc(100vh / 1.5);
+        overflow: visible;
     }
 
     .hero-content {
@@ -522,6 +523,22 @@ section {
     .hero-button {
         font-size: 17px;
         padding: 14px 24px;
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1200px) {
+    body > nav,
+    body > section,
+    body > footer {
+        zoom: 1;
+    }
+
+    .hero {
+        height: 100vh;
+        min-height: 100vh;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.7fr);
+        gap: clamp(24px, 5vw, 64px);
+        padding-left: clamp(24px, 8vw, 120px);
     }
 }
 
