@@ -371,12 +371,12 @@ section {
 @media (min-width: 701px) {
     .hero-content {
         max-width: 100%;
+        margin-left: -1.5vw;
     }
 
     .hero h2 {
         max-width: 1100px;
         font-size: clamp(64px, 5vw, 100px);
-        transform: translateX(-1.5vw);
     }
 
     .hero-description {
