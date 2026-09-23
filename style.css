@@ -61,7 +61,7 @@ html, body {
   filter: blur(150px);
   border-radius: 50%;
     transition: width 0.35s ease, height 0.35s ease;
-    animation: ambienceFlicker 4.6s ease-in-out infinite;
+    animation: ambienceFlicker 10s ease-in-out infinite;
   pointer-events: none;
   z-index: 9999;
 }
