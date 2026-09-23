@@ -29,7 +29,7 @@ html, body {
 .ambience-top-left {
   position: fixed !important;
   top: -50px;
-  left: 50px;
+  left: 75px;
     width: clamp(220px, 45vw, 450px);
     height: clamp(220px, 45vw, 450px);
   background: radial-gradient(
