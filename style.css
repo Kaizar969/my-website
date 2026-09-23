@@ -473,11 +473,11 @@ section {
 
     @media (max-width: 700px) {
     .hero h2 .hero-welcome {
-        font-size: 25.5px;
+        font-size: 30px;
     }
 
     .hero h2 span:not(.hero-welcome) {
-        font-size: 35px;
+        font-size: 50px;
     }
 }
 
