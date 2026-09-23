@@ -71,6 +71,12 @@ body > *:not(#bgCanvas):not(nav) {
     z-index: 1;
 }
 
+body > nav,
+body > section,
+body > footer {
+    zoom: 1.5;
+}
+
 @keyframes ambienceFlicker {
     0%, 31%, 52%, 100% {
         opacity: 1;
