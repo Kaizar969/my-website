@@ -362,6 +362,11 @@ section {
     font-family: "Dela Gothic One", sans-serif;
 }
 
+.hero-typing {
+    display: block;
+    margin-top: 23px;
+}
+
 .hero-description {
     max-width: 600px;
     margin: 15px 0 0;
@@ -450,6 +455,16 @@ section {
         text-align: left;
     }
 
+    @media (max-width: 700px) {
+    .hero h2 .hero-welcome {
+        font-size: 24px;
+    }
+
+    .hero h2 span:not(.hero-welcome) {
+        font-size: 35px;
+    }
+}
+
     .hero-content {
         margin-left: -1.5vw;
         animation: none;
@@ -457,14 +472,6 @@ section {
 
     .hero-music-space {
         display: none;
-    }
-
-    .hero h2 {
-        font-size: 18px;
-    }
-
-    .hero h2 span {
-        font-size: 35px;
     }
 
     .hero h2 br:first-of-type {
@@ -497,6 +504,10 @@ section {
 .hero-content h2 span {
     color: #2c67ed;
     text-shadow: none;
+}
+
+.hero-content h2 span.hero-welcome {
+    color: #ffffff;
 }
 
 .section {
