@@ -100,7 +100,7 @@ nav {
     align-items: center;
     justify-content: center;
     position: fixed;
-    background: rgba(0, 0, 0, 0.50); top: 30px;
+    background: rgba(0, 0, 0, 0.50); top: 20px;
     left: 50%;
     transform: translateX(-50%) scale(1);
     transform-origin: top center;
@@ -246,7 +246,7 @@ section {
     }
 
     nav {
-        top: 30px;
+        top: 20px;
         padding: 9px;
         transform: translateX(-50%) scale(0.75);
         transform-origin: top center;
