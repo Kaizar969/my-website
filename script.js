@@ -1,3 +1,9 @@
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
+window.scrollTo(0, 0);
+
 function scrollToContact() {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
 }
