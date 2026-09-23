@@ -445,7 +445,7 @@ section {
     }
 
     .hero-description {
-        max-width: 555px;
+        max-width: 480px;
         margin-top: 15px;
         font-size: 15px;
     }
@@ -506,6 +506,7 @@ section {
     }
 
     .hero-description {
+        max-width: 280px;
         margin-top: 15px;
         font-size: 5.7px;
         line-height: 1.6;
