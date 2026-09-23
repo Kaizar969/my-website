@@ -24,6 +24,7 @@ body {
 
 html, body {
   overflow-x: hidden;
+
 }
 
 .ambience-top-left {
@@ -268,6 +269,17 @@ section {
     scroll-margin-top: 90px;
 }
 
+#about {
+    color: #ffffff;
+}
+
+#products2 {
+    color: #000000;
+}
+
+#products {
+    color: #ffffff;
+}
 @media (max-width: 700px) {
     html,
     body {
@@ -376,7 +388,6 @@ section {
 .hero h2 span {
     display: block;
     color: #c2fbff;
-    text-shadow: 0 0 18px rgba(194, 251, 255, 0.35);
     font-family: "Dela Gothic One", sans-serif;
 }
 
