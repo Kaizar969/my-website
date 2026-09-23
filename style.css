@@ -248,7 +248,7 @@ section {
     nav {
         top: 20px;
         padding: 9px;
-        transform: translateX(-50%) scale(0.85);
+        transform: translateX(-50%) scale(0.70);
         transform-origin: top center;
         width: 290px;
 
