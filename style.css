@@ -100,7 +100,7 @@ nav {
     align-items: center;
     justify-content: center;
     position: fixed;
-    background: rgba(0, 0, 0, 0.50); top: 20px;
+    background: rgba(16, 24, 38, 0.8); top: 20px;
     left: 50%;
     transform: translateX(-50%) scale(1);
     transform-origin: top center;
@@ -110,7 +110,6 @@ nav {
     padding:  clamp(11px, 1.6vw, 15px);
     font-size: clamp(15px, 1.6vw, 17px);
     font-weight: 850;
-    background: #101826;
     color: #ffffff;
     border-radius: 9999px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
