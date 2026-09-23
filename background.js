@@ -121,8 +121,8 @@ function connect() {
 
       if (distance < (canvas.width / 7) * (canvas.height / 7)) {
         opacityValue = 1 - (distance / 20000);
-        ctx.strokeStyle = `rgba(100, 200, 255, ${opacityValue})`;
-        ctx.lineWidth = 1;
+        ctx.strokeStyle = `rgba(44, 103, 237, ${opacityValue})`;
+        ctx.lineWidth = 0.75;
         ctx.beginPath();
         ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
         ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
