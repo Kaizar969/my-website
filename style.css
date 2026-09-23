@@ -353,12 +353,14 @@ section {
     font-size: 72px;
     line-height: 1.05;
     letter-spacing: 0;
+    font-family: Georgia, serif;
 }
 
 .hero h2 span {
     display: block;
     color: #c2fbff;
     text-shadow: 0 0 18px rgba(194, 251, 255, 0.35);
+    font-family: "Dela Gothic One", sans-serif;
 }
 
 .hero-description {
@@ -367,6 +369,7 @@ section {
     color: rgba(255, 255, 255, 0.84);
     font-size: 19px;
     line-height: 1.7;
+    font-family: "Plus Jakarta Sans", sans-serif;
 }
 
 .hero-actions {
@@ -412,7 +415,7 @@ section {
 
     .hero h2 {
         max-width: 1100px;
-        font-size: clamp(50px, 4vw, 80px);
+        font-size: clamp(30px, 3vw, 50px);
     }
 
     .hero-description {
