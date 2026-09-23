@@ -319,6 +319,7 @@ section {
 }
 
 .hero {
+    height: 100vh;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
@@ -492,6 +493,11 @@ section {
 }
 
 @media (min-width: 701px) {
+    .hero {
+        height: calc(100vh / 1.5);
+        min-height: calc(100vh / 1.5);
+    }
+
     .hero-content {
         max-width: 100%;
         margin-left: -1.5vw;
@@ -533,7 +539,9 @@ section {
 
 @media (max-width: 700px) {
     .hero {
+        height: auto;
         min-height: 100vh;
+        overflow: visible;
         padding: 110px 20px 64px;
         padding-top: 50px;
         grid-template-columns: 1fr;
