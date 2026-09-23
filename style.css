@@ -269,6 +269,17 @@ section {
 }
 
 @media (max-width: 600px) {
+    html,
+    body {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none;
+    }
+
     .ambience-top-left {
         top: -25px;
         left: -25px;
