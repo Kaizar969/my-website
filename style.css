@@ -508,13 +508,13 @@ section {
     .hero-description {
         width: 200px;
         max-width: 200px;
-        margin-top: 15px;
+        margin-top: 3px;
         font-size: 5.7px;
         line-height: 1.6;
     }
 
     .hero-typing {
-        margin-top: 15px;
+        margin-top: 5px;
         font-size: 8.7px;
     }
 
