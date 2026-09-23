@@ -364,18 +364,28 @@ section {
 
 .hero-typing {
     display: inline-block;
-    min-height: 1.2em;
+    height: 1.2em;
+    white-space: nowrap;
     margin-top: 23px;
     color: #ffffff;
     font-family: "Cascadia Code", sans-serif;
-    border-right: 2px solid currentColor;
-    padding-right: 4px;
+    padding-right: 0;
+}
+
+.hero-typing::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1.2em;
+    margin-left: 1px;
+    vertical-align: -0.2em;
+    background: currentColor;
     animation: typingCursor 0.7s step-end infinite;
 }
 
 @keyframes typingCursor {
     50% {
-        border-color: transparent;
+        opacity: 0;
     }
 }
 
