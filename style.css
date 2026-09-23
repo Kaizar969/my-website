@@ -259,7 +259,7 @@ section {
 }
 
 .hero {
-    min-height: 90vh;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
     padding: 120px max(24px, 8vw) 72px;
@@ -305,12 +305,13 @@ section {
 
 .hero h2 {
     max-width: 720px;
-    font-size: 64px;
+    font-size: 78px;
     line-height: 1.05;
     letter-spacing: 0;
 }
 
 .hero h2 span {
+    display: block;
     color: #c2fbff;
     text-shadow: 0 0 18px rgba(194, 251, 255, 0.35);
 }
@@ -319,7 +320,7 @@ section {
     max-width: 600px;
     margin: 24px 0 0;
     color: rgba(255, 255, 255, 0.84);
-    font-size: 17px;
+    font-size: 20px;
     line-height: 1.7;
 }
 
@@ -333,7 +334,7 @@ section {
     display: inline-block;
     padding: 13px 22px;
     border-radius: 9999px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     text-decoration: none;
     transition: background 0.3s ease, color 0.3s ease,
@@ -375,7 +376,7 @@ section {
 
 @media (max-width: 700px) {
     .hero {
-        min-height: 88vh;
+        min-height: 100vh;
         padding: 110px 20px 64px;
         grid-template-columns: 1fr;
         text-align: left;
@@ -386,11 +387,11 @@ section {
     }
 
     .hero h2 {
-        font-size: 40px;
+        font-size: 52px;
     }
 
     .hero-description {
-        font-size: 15px;
+        font-size: 18px;
         line-height: 1.6;
     }
 
