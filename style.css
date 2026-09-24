@@ -640,6 +640,31 @@ section {
         text-align: center;
         font-size: 10px;
         padding: 6px 12px;
+        -webkit-tap-highlight-color: transparent;
+        outline: none;
+    }
+
+    .hero-button:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .hero-button-primary:hover {
+        background: #2c67ed;
+        color: #ffffff;
+    }
+
+    .hero-button-secondary:hover {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .hero-button:active {
+        transform: translateY(-2px);
+    }
+
+    .hero-button:focus {
+        outline: none;
     }
     
     .section {

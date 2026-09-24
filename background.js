@@ -22,9 +22,16 @@ window.addEventListener('mouseout', () => {
 
 function resizeCanvas() {
   const viewportWidth = document.documentElement.clientWidth;
-  const viewportHeight = document.documentElement.clientHeight;
+  const isMobile = window.matchMedia('(max-width: 700px)').matches;
+  const viewportHeight = isMobile
+    ? (canvas.height || document.documentElement.clientHeight)
+    : document.documentElement.clientHeight;
   const previousWidth = canvas.width;
   const previousHeight = canvas.height;
+
+  if (isMobile && previousWidth === viewportWidth) {
+    return;
+  }
 
   canvas.width = viewportWidth;
   canvas.height = viewportHeight;
