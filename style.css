@@ -101,7 +101,7 @@ nav {
     align-items: center;
     justify-content: center;
     position: fixed;
-    background: rgba(16, 24, 38, 0.6); 
+    background: #10182699; 
     top: 55px;
     left: 50%;
     transform: translateX(-50%) scale(1);
@@ -466,10 +466,17 @@ section {
     animation-delay: 3.4s;
 }
 
-.hero-button:hover {
+.hero-button-primary:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.22);
+    background: #10182699;
     box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+}
+
+.hero-button-secondary:hover {
+    transform: translateY(-2px);
+    background: #10182699;
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+    color: #ffffff
 }
 
 @keyframes navEnter {
