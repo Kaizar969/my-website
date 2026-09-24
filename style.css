@@ -334,12 +334,6 @@ section {
         -webkit-tap-highlight-color: transparent;
     }
 
-    {
-    .hero-button {
-        font-size: 14px;
-        padding: 5px 10px;
-    }
-}
 }
 
 .hero {
@@ -614,7 +608,7 @@ section {
 
     .hero-description {
         max-width: 220px;
-        margin-top: 3px;
+        margin-top: 5px;
         font-size: 6px;
         line-height: 1.6;
     }
@@ -627,16 +621,19 @@ section {
     .hero-actions {
         justify-content: flex-start;
         flex-direction: row;
-        width: min(100%, 400px);
+        gap: 5px;
+        width: max-content;
         margin-right: 0;
         margin-left: 0;
+        padding-top: 1px;
+        margin-top: 5px;
     }
 
     .hero-button {
-        flex: 1;
+        flex: 0 0 auto;
         text-align: center;
-        padding-left: 12px;
-        padding-right: 12px;
+        font-size: 7px;
+        padding: 3px 6px;
     }
     
     .section {
