@@ -656,7 +656,7 @@ section {
 #about,
 #products,
 #contact {
-    padding-top: 150px;
+    padding-top: 175px;
 }
 
 #contact {
@@ -667,7 +667,7 @@ section {
     #about,
     #products,
     #contact {
-        padding-top: 50px;
+        padding-top: 70px;
     }
 
     #contact {
@@ -774,9 +774,11 @@ body.popup-open {
 
 footer {
     padding: 20px;
+    padding-top: 20px;
     background: transparent;
     text-align: center;
     color: #ffffff;
+    font-size: 10px;
 }
 
 html {
