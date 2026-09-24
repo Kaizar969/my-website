@@ -649,13 +649,13 @@ section {
     }
 
     .hero-button-primary:hover {
-        background: #2c67ed;
-        color: #ffffff;
+        background: #092738;
+        color: #2c67ed;
     }
 
     .hero-button-secondary:hover {
-        background: #ffffff;
-        color: #000000;
+        background: #092738;
+        color: #ffffff;
     }
 
     .hero-button:active {
