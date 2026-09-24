@@ -648,18 +648,6 @@ section {
         box-shadow: none;
     }
 
-    .hero-button-primary:hover {
-        transform: translateY(-2px);
-        background: #092738;
-        color: #2c67ed;
-    }
-
-    .hero-button-secondary:hover {
-        transform: translateY(-2px);
-        background: #092738;
-        color: #ffffff;
-    }
-
     .hero-button:active {
         transform: translateY(-2px);
     }
