@@ -33,11 +33,21 @@
                 </h2>
                 <p2 class="hero-typing">#</p2>
                 <p class="hero-description">Ini adalah website buatan saya sendiri, mohon dimaklumi jika banyak kekurangan. Silahkan laporkan dengan cara mengirim pesan pada menu CONTACT jika kamu menemukan bug. Terima kasih sudah berkunjung, semoga harimu menyenangkan, selalu diberi kesehatan, dan rezeki yang melimpah!</p>
-                <div class="hero-actions">
-                    <a class="hero-button hero-button-primary" href="#contact">Contact Us ➦</a>
-                    <a class="hero-button hero-button-secondary" href="#products">Best Seller ➥</a>
-                </div>
+            <div class="hero-actions">
+                <a class="hero-button hero-button-primary" href="#contact">Contact Us ➦</a>
+                <a class="hero-button hero-button-secondary" href="#products">Best Seller ➥</a>
             </div>
+            <div class="hero-actions2">
+                <p class="hero-actions2-text">Find Us</p>
+                <a class="hero-button-find-us-primary" href="https://www.instagram.com/n1zrlcs/"target="_blank" rel="noopener noreferrer"</a>
+                    <img src="ig-logo.png" alt="Instagram Logo" class="instagram-logo">
+                <a class="hero-button-find-us-secondary" href="https://www.facebook.com/zuck/"target="_blank" rel="noopener noreferrer"</a>
+                    <img src="fb-logo.png" alt="Facebook Logo" class="facebook-logo">
+                <a class="hero-button-find-us-tri" href="https://wa.me/6281255804813"target="_blank" rel="noopener noreferrer"</a>
+                    <img src="wa-logo.png" alt="WhatsApp Logo" class="whatsapp-logo">
+            </div>
+            </div>
+
         </section>
 
         <section id="about" class="section">
@@ -86,7 +96,7 @@
 
         </section>
 
-    <audio id="bgMusic" hidden preload="auto"
+    <audio id="bgMusic" hidden preload="auto" controls loop
         <source src="music.mp3" type="audio/mpeg"></audio>
     </audio>
 
@@ -94,7 +104,6 @@
 document.addEventListener("DOMContentLoaded", function () {
         const music = document.getElementById("bgMusic");
 
-        // Fungsi pemutar audio
         function startAudio() {
             music.play().then(() => {
                 console.log("MUSIC BERHASIL DIPUTAR!");
