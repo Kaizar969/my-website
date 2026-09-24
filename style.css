@@ -169,7 +169,7 @@ nav a {
     padding: 9px 15px;
     position: relative;
     overflow: hidden;
-    isolation: isolate;
+    isolatio18pxn: isolate;
     color: #ffffff80;
     text-decoration: none;
     border-radius: 9999px;
@@ -462,21 +462,19 @@ section {
 
 .hero-button-secondary {
     background: #ffffff;
-    color: #000000;
+    color: #2c67ed;
     animation-delay: 3.4s;
 }
 
 .hero-button-primary:hover {
     transform: translateY(-2px);
-    background: #10182699;
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
+    background: #092738;
 }
 
 .hero-button-secondary:hover {
     transform: translateY(-2px);
-    background: #10182699;
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.22);
-    color: #ffffff
+    background: #092738;
+    color: #ffffff;
 }
 
 @keyframes navEnter {
