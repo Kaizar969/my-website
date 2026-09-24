@@ -544,7 +544,7 @@ section {
     }
 
     .hero-button {
-        font-size: 13.5px;
+        font-size: 18px;
         padding: 12px 24px;
     }
 }
@@ -638,7 +638,7 @@ section {
     .hero-button {
         flex: 0 0 auto;
         text-align: center;
-        font-size: 6px;
+        font-size: 8px;
         padding: 6px 12px;
         -webkit-tap-highlight-color: transparent;
         outline: none;
