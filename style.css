@@ -469,6 +469,7 @@ section {
 .hero-button-primary:hover {
     transform: translateY(-2px);
     background: #092738;
+    color: #2c67ed;
 }
 
 .hero-button-secondary:hover {
