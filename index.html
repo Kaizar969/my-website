@@ -86,10 +86,51 @@
 
         </section>
 
+    <audio id="bgMusic" hidden preload="auto"
+        <source src="music.mp3" type="audio/mpeg"></audio>
+    </audio>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+        const music = document.getElementById("bgMusic");
+
+        // Fungsi pemutar audio
+        function startAudio() {
+            music.play().then(() => {
+                console.log("MUSIC BERHASIL DIPUTAR!");
+                removeTriggers();
+            }).catch(err => {
+                console.log("MUSIC GAGAL DIPUTAR KARENA BROWSER MUNGKIN MEMBLOKIR AUDIO, MENUNGGU TRIGGER LAIN.", err);
+            });
+        }
+
+        function onUserInteraction() {
+            startAudio();
+        }
+
+        function removeTriggers() {
+            document.removeEventListener("mousemove", onUserInteraction);
+            document.removeEventListener("click", onUserInteraction);
+            document.removeEventListener("touchstart", onUserInteraction);
+            document.removeEventListener("scroll", onUserInteraction);
+            document.removeEventListener("keydown", onUserInteraction);
+            window.removeEventListener("wheel", onUserInteraction);
+            window.removeEventListener("scroll", onUserInteraction);
+        }
+
+        document.addEventListener("mousemove", onUserInteraction);
+        document.addEventListener("click", onUserInteraction);
+        document.addEventListener("touchstart", onUserInteraction);
+        document.addEventListener("scroll", onUserInteraction);
+        document.addEventListener("keydown", onUserInteraction);
+
+        startAudio();
+    });
+</script>
+
         <footer>
             <p>&copy; 2026 Kaizar Official. All rights reserved.</p>
         </footer>
-
     </body>
     <script src="script.js"></script>
     <script src="background.js"></script>
