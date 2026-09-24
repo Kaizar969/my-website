@@ -266,7 +266,7 @@ nav a.active::before {
 }
 
 section {
-    scroll-margin-top: 90px;
+    scroll-margin-top: 0;
 }
 
 #about {
@@ -633,9 +633,7 @@ section {
     }
     
     .section {
-        padding-top: ;
-
-
+        padding-top: 50px;
     }
 
 }
@@ -650,9 +648,31 @@ section {
 }
 
 .section {
-    padding: 60px 40px;
+    padding: 150px 40px 60px;
     max-width: 1000px;
     margin: auto;
+}
+
+#about,
+#products,
+#contact {
+    padding-top: 150px;
+}
+
+#contact {
+    padding-bottom: calc(100vh / 1.5);
+}
+
+@media (max-width: 700px) {
+    #about,
+    #products,
+    #contact {
+        padding-top: 50px;
+    }
+
+    #contact {
+        padding-bottom: 100vh;
+    }
 }
 
 .section h2 {
