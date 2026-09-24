@@ -333,6 +333,13 @@ section {
         outline: none;
         -webkit-tap-highlight-color: transparent;
     }
+
+    {
+    .hero-button {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+}
 }
 
 .hero {
@@ -538,7 +545,7 @@ section {
 
     .hero-button {
         font-size: 17px;
-        padding: 14px 24px;
+        padding: 7px 14px;
     }
 }
 
