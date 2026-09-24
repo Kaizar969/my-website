@@ -3,6 +3,7 @@ const ctx = canvas.getContext('2d');
 
 let particlesArray = [];
 const numberOfParticles = 80;
+let mobileCanvasHeight = null;
 
 const mouse = {
   x: null,
@@ -21,17 +22,20 @@ window.addEventListener('mouseout', () => {
 });
 
 function resizeCanvas() {
-  const viewportWidth = document.documentElement.clientWidth;
+  const viewportWidth = window.innerWidth;
   const isMobile = window.matchMedia('(max-width: 700px)').matches;
-  const viewportHeight = isMobile
-    ? (canvas.height || document.documentElement.clientHeight)
-    : document.documentElement.clientHeight;
   const previousWidth = canvas.width;
   const previousHeight = canvas.height;
 
   if (isMobile && previousWidth === viewportWidth) {
     return;
   }
+
+  if (isMobile) {
+    mobileCanvasHeight = window.innerHeight;
+  }
+
+  const viewportHeight = isMobile ? mobileCanvasHeight : window.innerHeight;
 
   canvas.width = viewportWidth;
   canvas.height = viewportHeight;
