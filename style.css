@@ -588,7 +588,7 @@ section {
         text-align: left;
     }
 
-    @media (max-width: 700px) {
+@media (max-width: 700px) {
     .hero h2 .hero-welcome {
         font-size: 24px;
     }
